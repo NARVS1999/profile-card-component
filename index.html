@@ -8,28 +8,190 @@
   
   <title>Frontend Mentor | Profile card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Indie+Flower&family=Kumbh+Sans:wght@700&family=Varela+Round&display=swap');
+    * {
+      /* border: 1px dotted red; */
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Kumbh Sans';
+      font-size: 18px;
+      color: hsl(229, 23%, 23%);
+      display: flex;
+      flex-direction: column;
+      background-color:hsl(185, 75%, 39%);
+
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .main-container {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+
+      height: 100vh;
+    }
+
+    .attribution {
+        font-size: 10px;
+        
+        margin: 0 auto;
+        padding: 5px;
+
+        margin-top: auto;
+    }
+
+    .profile-card {
+      width: 95%;
+
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 0 10px 0px  hsl(0, 0%, 59%);
+
+      margin: auto;
+      transition: all .5s;
+    }
+
+    .profile-card:hover {
+      transform: scale(1.1);
+      box-shadow: none;
+    }
+
+    .top-container {
+      background: url(images/bg-pattern-card.svg);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      
+      height: 120px;
+    }
+
+    .profile-picture {
+      display: block;
+      border: 5px solid white;
+      border-radius: 50px;
+
+      width: fit-content;
+      height: auto;
+
+      margin-top: -50px;
+    }
+
+    .mid-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .full-name .age {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: hsl(0, 0%, 59%);
+    }
+
+    .country {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: hsl(0, 0%, 59%);
+    }
+    
+    .bottom-container {
+      display: flex;
+      border-top: 1px solid hsl(0, 0%, 90%);
+      
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .bottom-container div {
+      flex: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .bottom-container div .bottom-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: hsl(0, 0%, 59%);
+    }
+    @media screen and (min-width: 375px){
+      .profile-card {
+        width: 320px;
+      }
+    }
+
+    .background {
+      display: flex;
+      position: fixed;
+      
+      width: 100vw;
+      height: 100vh;
+      
+    }
+
+    img {
+      width: 50%;
+      height: fit-content;
+    }
+
+    .bg-top {
+      margin-top: -200px;
+      margin-left: -100px;
+    }
+
+    .bg-bottom {
+      margin-left: auto;
+      margin-top: 200px;
+      margin-right: -100px;
+    }
   </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
+  <div class="background">
+    <img src="images/bg-pattern-top.svg" alt="bg-top" class="bg-top">
+    <img src="images/bg-pattern-bottom.svg" alt="bg-bottom" class="bg-bottom">
+  </div>
+  <main class="main-container">
+    <section class="profile-card">
+      <div class="top-container">
 
-  80K
-  Followers
+      </div>
 
-  803K
-  Likes
+      <div class="mid-container">
+        <img src="images/image-victor.jpg" alt="profile-picture" class="profile-picture">
+        <p class="full-name">Victor Crest <span class="age">26</span></p>
+        <p class="country">London</p>
+      </div>
 
-  1.4K
-  Photos
+      <div class="bottom-container">
+        <div class="div-1">
+          <p>80K</p>
+          <p class="bottom-title">Followers</p>
+        </div>
+        <div class="div-2">
+          <p>803K</p>
+          <p class="bottom-title">Likes</p>
+        </div>
+        <div class="div-2">
+          <p>1.4K</p>
+          <p class="bottom-title">Photos</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/NARVS1999" target="_blank">NARVS1999</a>.
   </div>
 </body>
 </html>
